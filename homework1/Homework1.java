@@ -192,6 +192,7 @@ public class Homework1 {
    * Your method will be ran on following input: 0,1,2,3,10,25
    */
     // Uncomment to print the results of calling your fibonacci method with the following input:
+<<<<<<< HEAD
     static int n1=0,n2=1,n3=0;     
     static void printFibonacci(int count){  //@param count    
       if(count>0){    
@@ -206,6 +207,22 @@ public class Homework1 {
    int count=10;    
    System.out.print(n1+" "+n2);//printing 0 and 1    
    printFibonacci(count-2);//n-2 because 2 numbers are already printed   
+=======
+    static int n1=0,n2=1,n3=0; ¬†¬†¬†¬†
+    static void printFibonacci(int count){  //@param count¬†¬†¬†¬†
+¬†¬†¬†¬†  if(count>0){¬†¬†¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†¬†n3 = n1 + n2;¬†¬†¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†¬†n1 = n2;¬†¬†¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†¬†n2 = n3;¬†¬†¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†¬†System.out.print(" "+n3);¬†¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†¬†printFibonacci(count-1);¬†¬†¬†¬†
+¬†¬†¬†¬†¬†}¬†¬†¬†¬†
+   }¬†¬†¬†¬†
+   public static void main(String args[]){¬†¬†¬†¬†
+¬† ¬†int count=10;¬†¬†¬†¬†
+¬† ¬†System.out.print(n1+" "+n2);//printing 0 and 1¬†¬†¬†¬†
+¬† ¬†printFibonacci(count-2);//n-2 because 2 numbers are already printed¬†¬†¬†
+>>>>>>> fc87cc41066d012e6b97e826303f9e629d65ee80
 
    System.out.println(hw1.fibonacci(0));
    System.out.println(hw1.fibonacci(1));
@@ -214,7 +231,11 @@ public class Homework1 {
    System.out.println(hw1.fibonacci(10));
    System.out.println(hw1.fibonacci(25));
  }
+<<<<<<< HEAD
   
+=======
+¬†¬†
+>>>>>>> fc87cc41066d012e6b97e826303f9e629d65ee80
 
     
     
@@ -245,6 +266,7 @@ static String longestPalindrome;
 public String oldPalindrome="";
 static int longest;
 
+<<<<<<< HEAD
 public void allSubstrings(String s){        
     for(int i=0;i<s.length();i++){
         for(int j=1;j<=s.length()-i;j++){
@@ -262,6 +284,25 @@ public void isPalindrome(String sub){
     }
     else{
         System.out.println("the string "+sub+"iss not a palindrome");
+=======
+public void allSubstrings(String s){¬†¬†¬†¬†¬†¬†¬†¬†
+¬†¬†¬†¬†for(int i=0;i<s.length();i++){
+¬†¬†¬†¬†¬†¬†¬†¬†for(int j=1;j<=s.length()-i;j++){
+¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†String subString=s.substring(i, i+j);¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†isPalindrome(subString);¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†
+¬†¬†¬†¬†¬†¬†¬†¬†}
+public void isPalindrome(String sub){
+¬†¬†¬†¬†System.out.println("String to b checked is "+sub);
+¬†¬†¬†¬†StringBuilder sb=new StringBuilder();
+¬†¬†¬†¬†sb.append(sub);¬†¬†¬†¬†¬†// append string to string builder 
+¬†¬†¬†¬†sb.reverse();¬†¬†¬†¬†¬†¬†¬†¬†
+¬†¬†¬†¬†if(sub.equals(sb.toString())){¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†¬†// palindrome condition 
+¬†¬†¬†¬†¬†¬†¬†¬†System.out.println("the given String :"+sub+" is a palindrome");
+¬†¬†¬†¬†¬†¬†¬†¬†longestPalindrome(sub);
+¬†¬†¬†¬†}
+¬†¬†¬†¬†else{
+¬†¬†¬†¬†¬†¬†¬†¬†System.out.println("the string "+sub+"iss not a palindrome");
+>>>>>>> fc87cc41066d012e6b97e826303f9e629d65ee80
 }
 
 
@@ -289,3 +330,7 @@ public void isPalindrome(String sub){
 
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc87cc41066d012e6b97e826303f9e629d65ee80
