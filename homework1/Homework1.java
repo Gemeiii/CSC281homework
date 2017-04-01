@@ -1,15 +1,21 @@
 /**
  * Homework 1 for CSC-281.001 Spring 2017
- * 
- * Your codename:
- * 
+ *
+ * Points: 70
+ * I can see solid understanding forming after talking to you in office hours.
+ * The largest problem is placing function declarations and calls in incorrect places.
+ * No codename.
+ *
+ *
+ * Your codename: [Phaerdiira]
+ *
  * This assignment consists of 7 problems. Problem 1 asks you to modify existing
- * code for three subproblems.The remaining six problems each require you to 
+ * code for three subproblems.The remaining six problems each require you to
  * write a method that satisfies the requirements stated in their descriptions.
- * 
+ *
  * You are required to create a javadoc style comment for each method you
- * create. See the sample method named add3 for an example to follow. 
- * 
+ * create. See the sample method named add3 for an example to follow.
+ *
  * Your homework will be graded in the following manner:
  * 70 points for correctness.
  * 		10 points per problem.
@@ -26,19 +32,19 @@ public class Homework1 {
 
   /**
    * The entry point for the program.
-   * 
+   *
    * @param args Commandline input arugments.
    */
   public static void main(String[] args) {
     Homework1 hw1 = new Homework1();
     System.out.println("===Problem 1===");
     hw1.problem1();
-/**  
-   * PROBLEM 1 // can run, but get compile errors 
+/**
+   * PROBLEM 1 // can run, but get compile errors
    * Change the expressions in the variable assignments so the program prints "successfully
    * completed!". This may involve changing the arithmetic operators or the type of number that is
    * produced.
-   */  
+   */
     public void problem1() {
     double result1 = 5.0 / 4.0;
     System.out.println(result1);
@@ -73,7 +79,7 @@ public class Homework1 {
    *
    * When a double or float is cast into an integer via (int), the fractional part of the number
    * after that decimal place is thrown away (e.g. 3.3 becomes 3). An example: int x = (int)3.3;
-   * 
+   *
    * 1) Write a method called "topInt" that takes a double as a parameter and returns an int that
    * is rounded up from the double instead of being rounded down.
    *
@@ -82,12 +88,12 @@ public class Homework1 {
    * up to 6.0).
    *
    * Hint: use a method in the math package that we covered in class.
-   * 
+   *
    * Your method will be ran with the following input: 1.5 5.1 1.0 -4.2
    */
 
     // Uncomment to print the results of calling your topInt method with the following input:
-     public int topInt(double d){ //@param x 
+     public int topInt(double d){ //@param x
      return Math.ceil(d);    // @return the next biggest integer
      }
 
@@ -98,19 +104,19 @@ public class Homework1 {
       System.out.println(hw1.topInt(5.1));
       System.out.println(hw1.topInt(1.0));
       System.out.println(hw1.topInt(-4.2));
-   
+
 }
     System.out.println("===Problem 3===");
 
   /*
    * PROBLEM 3
-   * 
+   *
    * 1) Declare a method named "draw4x4" that prints a 4 by 4 box of a character. This character
    * should be defined by the first parameter of the method. This parameter should be of the char
    * data type. The output of this method is the printed box. This means there will be no return
    * statement in this method.
    *
-   * Here is what the output of draw4x4('x') should look like: 
+   * Here is what the output of draw4x4('x') should look like:
    * xxxx
    * x  x
    * x  x
@@ -126,7 +132,7 @@ public class Homework1 {
     // Uncomment to print the results of calling your citationName method with the following input:
   /*
    * PROBLEM 4
-   * 
+   *
    * 1) Write a method named "citationName" that takes two String parameters: a first name and a
    * last name. It should return a String that contains the last name concatenated with a comma, a
    * space, the first letter of the first name, and a period.
@@ -137,17 +143,17 @@ public class Homework1 {
    */
     public String ( string a, string b);
     public void citationName(string a, string b){  // @param string a, string b
-      System.out.println(String b "," string a[0]);  
+      System.out.println(String b "," string a[0]);
     System.out.println(hw1.citationName("Alastair","Reynolds"));
     System.out.println(hw1.citationName("Grace","Hopper"));
 }
-     
-    
+
+
     System.out.println("===Problem 5===");
 }
   /*
    * PROBLEM 5
-   * 
+   *
    * 1) Write a method named "min3" that takes 3 doubles as parameters and returns the lowest
    * value of the three.
    *
@@ -158,7 +164,7 @@ public class Homework1 {
 
          if ( a < b and a < c);
          {
-            m = a;    // a is the smallest value          
+            m = a;    // a is the smallest value
          }
          if (b < a and b < c){
 	    m = b;
@@ -175,7 +181,7 @@ public class Homework1 {
     System.out.println(String.valueOf(hw1.min3(1.0, 2.0, 3.0)));
     System.out.println(String.valueOf(hw1.min3(4.0, 3.0, 2.0)));
     System.out.println(String.valueOf(hw1.min3(0.5, 0.1, 0.5)));
-    
+
     System.out.println("===Problem 6===");
  /*
    * PROBLEM 6
@@ -187,7 +193,7 @@ public class Homework1 {
    *
    * Assume the seed values of F(0) = 1 and F(1) = 1.
    *
-   * This method should use recursion which means the method should call itself. 
+   * This method should use recursion which means the method should call itself.
    *
    * Your method will be ran on following input: 0,1,2,3,10,25
    */
@@ -208,7 +214,7 @@ public class Homework1 {
    System.out.print(n1+" "+n2);//printing 0 and 1    
    printFibonacci(count-2);//n-2 because 2 numbers are already printed   
 =======
-    static int n1=0,n2=1,n3=0; 
+    static int n1=0,n2=1,n3=0;
     static void printFibonacci(int count){  //@param count
        if(count>0)
 	n3 = n1 + n2;
@@ -220,7 +226,7 @@ public class Homework1 {
    }
    public static void main(String args[]){
      int count=10;
-     System.out.print(n1+" "+n2);//printing 0 and 
+     System.out.print(n1+" "+n2);//printing 0 and
      printFibonacci(count-2);//n-2 because 2 numbers are already printed
 
 
@@ -233,8 +239,8 @@ public class Homework1 {
  }
 
 
-    
-    
+
+
     System.out.println("===Problem 7===");
  /* PROMBLEM 7
    * A palindrome is where a word or sentence is spelled the same
@@ -252,7 +258,7 @@ public class Homework1 {
    * "cat"
    * "hannah"
    * "saippuakivikauppias"
-   * 
+   *
    * hint: build a string that is the reverse of the input
    */
    import java.util.Scanner;
@@ -272,9 +278,9 @@ public void allSubstrings(String s){        
 public void isPalindrome(String sub){
     System.out.println("String to b checked is "+sub);
     StringBuilder sb=new StringBuilder();
-    sb.append(sub);     // append string to string builder 
+    sb.append(sub);     // append string to string builder
     sb.reverse();        
-    if(sub.equals(sb.toString())){                        // palindrome condition 
+    if(sub.equals(sb.toString())){                        // palindrome condition
         System.out.println("the given String :"+sub+" is a palindrome");
         longestPalindrome(sub);
     }
@@ -290,9 +296,9 @@ public void allSubstrings(String s){
 public void isPalindrome(String sub){
 	System.out.println("String to b checked is "+sub);
 	StringBuilder sb=new StringBuilder();
-	sb.append(sub);// append string to string builder 
+	sb.append(sub);// append string to string builder
 	sb.reverse();
-	if(sub.equals(sb.toString())){// palindrome condition 
+	if(sub.equals(sb.toString())){// palindrome condition
 	System.out.println("the given String :"+sub+" is a palindrome");
 	longestPalindrome(sub);
 }
@@ -310,10 +316,10 @@ public void isPalindrome(String sub){
   }
 
   /**
-   * (This is an example of a javadoc comment. All of your methods should have a similar comment.) 
+   * (This is an example of a javadoc comment. All of your methods should have a similar comment.)
    * This method adds three numbers together and returns
    * their sum.
-   * 
+   *
    * @param x The first number to sum.
    * @param y The second number to sum.
    * @param z The third number to sum.
@@ -325,4 +331,3 @@ public void isPalindrome(String sub){
 
 
 }
-

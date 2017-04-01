@@ -1,0 +1,307 @@
+Homework1.java:42: error: illegal start of expression
+    public void problem1() {
+    ^
+Homework1.java:42: error: illegal start of expression
+    public void problem1() {
+           ^
+Homework1.java:42: error: ';' expected
+    public void problem1() {
+                        ^
+Homework1.java:90: error: class, interface, or enum expected
+     public int topInt(double d){ //@param x 
+            ^
+Homework1.java:92: error: class, interface, or enum expected
+     }
+     ^
+Homework1.java:98: error: class, interface, or enum expected
+      System.out.println(hw1.topInt(5.1));
+      ^
+Homework1.java:99: error: class, interface, or enum expected
+      System.out.println(hw1.topInt(1.0));
+      ^
+Homework1.java:100: error: class, interface, or enum expected
+      System.out.println(hw1.topInt(-4.2));
+      ^
+Homework1.java:102: error: class, interface, or enum expected
+}
+^
+Homework1.java:125: error: class, interface, or enum expected
+    System.out.println("===Problem 4===");
+    ^
+Homework1.java:138: error: class, interface, or enum expected
+    public String ( string a, string b);
+           ^
+Homework1.java:139: error: class, interface, or enum expected
+    public void citationName(string a, string b){  // @param string a, string b
+           ^
+Homework1.java:141: error: class, interface, or enum expected
+    System.out.println(hw1.citationName("Alastair","Reynolds"));
+    ^
+Homework1.java:142: error: class, interface, or enum expected
+    System.out.println(hw1.citationName("Grace","Hopper"));
+    ^
+Homework1.java:143: error: class, interface, or enum expected
+}
+^
+Homework1.java:147: error: class, interface, or enum expected
+}
+^
+Homework1.java:155: error: class, interface, or enum expected
+      public static double min ( double a, double b, double c)
+                    ^
+Homework1.java:159: error: class, interface, or enum expected
+         if ( a < b and a < c);
+         ^
+Homework1.java:160: error: class, interface, or enum expected
+         {
+         ^
+Homework1.java:162: error: class, interface, or enum expected
+         }
+         ^
+Homework1.java:165: error: class, interface, or enum expected
+            }
+            ^
+Homework1.java:169: error: class, interface, or enum expected
+         }
+         ^
+Homework1.java:172: error: class, interface, or enum expected
+      }
+      ^
+Homework1.java:176: error: class, interface, or enum expected
+    System.out.println(String.valueOf(hw1.min3(4.0, 3.0, 2.0)));
+    ^
+Homework1.java:177: error: class, interface, or enum expected
+    System.out.println(String.valueOf(hw1.min3(0.5, 0.1, 0.5)));
+    ^
+Homework1.java:179: error: class, interface, or enum expected
+    System.out.println("===Problem 6===");
+    ^
+Homework1.java:195: error: class, interface, or enum expected
+<<<<<<< HEAD
+^
+Homework1.java:196: error: illegal character: '\u00a0'
+    static int n1=0,n2=1,n3=0;     
+                               ^
+Homework1.java:196: error: illegal character: '\u00a0'
+    static int n1=0,n2=1,n3=0;     
+                                ^
+Homework1.java:196: error: illegal character: '\u00a0'
+    static int n1=0,n2=1,n3=0;     
+                                 ^
+Homework1.java:196: error: illegal character: '\u00a0'
+    static int n1=0,n2=1,n3=0;     
+                                  ^
+Homework1.java:197: error: class, interface, or enum expected
+    static void printFibonacci(int count){  //@param count    
+           ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+ ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+  ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+   ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+                  ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+                   ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+                    ^
+Homework1.java:198: error: illegal character: '\u00a0'
+      if(count>0){    
+                     ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+ ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+  ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+   ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+    ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+     ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+      ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+       ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+        ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+                      ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+                       ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+                        ^
+Homework1.java:199: error: illegal character: '\u00a0'
+         n3 = n1 + n2;    
+                         ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+ ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+  ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+   ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+    ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+     ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+      ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+       ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+        ^
+Homework1.java:200: error: class, interface, or enum expected
+         n1 = n2;    
+            ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+                 ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+                  ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+                   ^
+Homework1.java:200: error: illegal character: '\u00a0'
+         n1 = n2;    
+                    ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+ ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+  ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+   ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+    ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+     ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+      ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+       ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+        ^
+Homework1.java:201: error: class, interface, or enum expected
+         n2 = n3;    
+            ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+                 ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+                  ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+                   ^
+Homework1.java:201: error: illegal character: '\u00a0'
+         n2 = n3;    
+                    ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+ ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+  ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+   ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+    ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+     ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+      ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+       ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+        ^
+Homework1.java:202: error: class, interface, or enum expected
+         System.out.print(" "+n3);   
+               ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+                                  ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+                                   ^
+Homework1.java:202: error: illegal character: '\u00a0'
+         System.out.print(" "+n3);   
+                                    ^
+Homework1.java:203: error: illegal character: '\u00a0'
+         printFibonacci(count-1);    
+^
+Homework1.java:203: error: illegal character: '\u00a0'
+         printFibonacci(count-1);    
+ ^
+Homework1.java:203: error: illegal character: '\u00a0'
+         printFibonacci(count-1);    
+  ^
+Homework1.java:203: error: illegal character: '\u00a0'
+         printFibonacci(count-1);    
+   ^
+Homework1.java:203: error: illegal character: '\u00a0'
+         printFibonacci(count-1);    
+    ^
+Homework1.java:203: error: illegal character: '\u00a0'
+         printFibonacci(count-1);    
+     ^
+100 errors
+===Problem 1===
+1.25
+Problem 1a: successfully completed!
+16.0
+Problem 1b: successfully completed!
+Problem 1c: successfully completed!
