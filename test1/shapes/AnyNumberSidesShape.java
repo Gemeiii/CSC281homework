@@ -1,4 +1,4 @@
-package test.shapes;
+package shapes;
 
 import java.awt.*;
 import java.util.*;
@@ -56,14 +56,12 @@ public class AnyNumberSidesShape extends BasicShape {
 
     /*
      * Sets the outline or stroke properties for the class.
-     */
-
-        g2d.setColor(this.strokeColor);
+    */
+    g2d.setColor(this.strokeColor);
         // set the stroke to have a width of 6.0f
-        g2d.setStroke(new BasicStroke(6.0f));
+        g2d.setStroke(new BasicStroke(4.0f));
         // draw the stroke outline of Polygon p
         g2d.draw(p);
-
     /*
      * Sets the internal or fill color of the polygon.
      */

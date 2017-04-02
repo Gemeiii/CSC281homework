@@ -16,10 +16,10 @@
  * 
  * -Read through each shape specification from the input and add a new instance of that shape to the
  * appropriate shape list. For example, the input of 3 100 100 would result in code like the
- * following in the readAndGenerateShapes method of the Surface class: this.tris.add(new Tri(100,
+ * following in the readAndGenerateShapes method of the Surface class: this.trises.add(new AnyNumberSidesShape(100,
  * 100));
  * 
- * -Create a set of classes that extend BasicShape with the following number of sides: Tri - 3
+ * -Create a set of classes that extend BasicShape with the following number of sides: AnyNumberSidesShape - 3
  * sided, Quad - 4 sided, Pent - 5 sided, and Hex - 6 sided. Note that these shapes do not need to
  * be regular; each shape can have sides of non-uniform length (e.g. both squares and rectangles are
  * valid Quads.
@@ -43,6 +43,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -106,13 +107,12 @@ public class PolyWhirl extends JFrame {
   class Surface extends JPanel {
 
     List<Crystal> crystals;
-   // Add the lists for your shapes below.
-    List<Triangle> triangles;
+    List<AnyNumberSidesShape> shapeList;
+    // Add the lists for your shapes below.
 
     public Surface() {
-      crystals = new ArrayList<Crystal>();
+      shapeList  =new ArrayList<AnyNumberSidesShape>();
       // initialize your shape lists here.
-      triangles = new ArrayList<Triangle>(); 
     }
 
     @Override
@@ -132,6 +132,53 @@ public class PolyWhirl extends JFrame {
        * end of input on the keyboard with ctrl-d).
        */
 
+
+      Scanner scan = new Scanner(System.in);
+      boolean inputEnded = false;
+      while(!inputEnded){
+        //
+        System.out.print("Please input number of sides:");
+        String sideNumberStr = scan.nextLine();
+        int sidesNumber = 3;
+        try{
+            sidesNumber = Integer.parseInt(sideNumberStr);
+        }catch (Exception e){
+
+        }
+        System.out.println("number of sides:"+sidesNumber);
+        //
+        System.out.print("Please input position-x:");
+        String posXStr = scan.nextLine();
+        int posX =128;
+        try{
+          posX= Integer.parseInt(posXStr);
+        }catch (Exception e){
+
+        }
+        System.out.println("position-x:"+posX);
+        //
+        System.out.print("Please input position-y:");
+        String posYStr = scan.nextLine();
+        int posY =128;
+        try{
+          posY= Integer.parseInt(posYStr);
+        }catch (Exception e){
+
+        }
+        System.out.println("position-y:"+posY);
+        //
+        AnyNumberSidesShape shape =new  AnyNumberSidesShape(posX,posY,sidesNumber);
+        shapeList.add(shape);
+        System.out.println("ok, the shape has been added,would you like to add some shapes else? y/n");
+        String addElse = scan.nextLine();
+        if("n".equals(addElse)){
+          inputEnded=true;
+          System.out.println("drawing...");
+        }
+      }
+
+
+
       /*
        * Create a shape for that line.
        */
@@ -144,13 +191,7 @@ public class PolyWhirl extends JFrame {
        * Here are some test shapes to show that the system works. Remove them before you turn in
        * your homework. Use the power of the crystals wisely!
        */
-      this.crystals.add(new Crystal(100, 125));
-      this.crystals.add(new Crystal(100, 225));
-      this.crystals.add(new Crystal(200, 125));
-     
-      this.triangles.add(new Triangle(400,125));
-      this.triangles.add(new Triangle(400,225));
-      this.triangles.add(new Triangle(500,125));
+
       // You can stop removing now.
     }
 
@@ -161,14 +202,13 @@ public class PolyWhirl extends JFrame {
       ((Graphics2D) g).setColor(java.awt.Color.WHITE);
       ((Graphics2D) g).fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
-      for (Crystal c : this.crystals) {
-        c.draw(g);
+
+      for (AnyNumberSidesShape a : this.shapeList) {
+        a.draw(g);
       }
-      for (Triangle t : this.triangles) {
-	t.draw(g);
       // Add the loops to draw your shapes below.
     }
 
   }
 }
-}
+

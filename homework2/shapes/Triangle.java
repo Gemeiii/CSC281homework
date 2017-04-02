@@ -1,4 +1,4 @@
-package test.shapes;
+package shapes;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -12,9 +12,9 @@ import java.util.List;
  * This class is an example how to inherit BasicShape to create your own shape-drawing class. You
  * should use this class as a pattern for making your own shape classes.
  */
-public class Crystal extends BasicShape {
+public class Triangle extends BasicShape {
 
-  public Crystal(int x, int y) {
+  public Triangle(int x, int y) {
     super(x, y);
   }
 
@@ -30,19 +30,13 @@ public class Crystal extends BasicShape {
 
     // Create the x coordinates of vertices of the Polygon
     xPoints.add(this.x - 10);
-    xPoints.add(this.x);
     xPoints.add(this.x + 10);
-    xPoints.add(this.x + 10);
-    xPoints.add(this.x);
     xPoints.add(this.x - 10);
 
     // Create the y coordinates of vertices of the Polygon
-    yPoints.add(this.y + 15);
-    yPoints.add(this.y + 25);
-    yPoints.add(this.y + 15);
-    yPoints.add(this.y - 15);
-    yPoints.add(this.y - 25);
-    yPoints.add(this.y - 15);
+    yPoints.add(this.y - 10);
+    yPoints.add(this.y );
+    yPoints.add(this.y + 10);
 
     /*
      * Add each point to the Polygon p. Each x and y value in the lists index correspondent. This
@@ -59,11 +53,11 @@ public class Crystal extends BasicShape {
      * Sets the outline or stroke properties for the class.
      */
     // specify the color
-    Color strokeColor = new Color(50, 50, 255, 255);
-    // make the color the active one
+    Color strokeColor = new Color(116, 180, 155, 255);
+    // make the color the active on
     g2d.setColor(strokeColor);
     // set the stroke to have a width of 6.0f
-    g2d.setStroke(new BasicStroke(6.0f));
+    g2d.setStroke(new BasicStroke(10.0f));
     // draw the stroke outline of Polygon p
     g2d.draw(p);
 
@@ -71,7 +65,7 @@ public class Crystal extends BasicShape {
      * Sets the internal or fill color of the polygon.
      */
     // create instance for for the fill color.
-    Color fillColor = new Color(200, 200, 255, 150);
+    Color fillColor = new Color(211, 246, 209, 150);
     // set the fill color to be the active color
     g2d.setColor(fillColor);
     // fill Polygon p with fillColor
