@@ -12,9 +12,9 @@ import java.util.List;
  * This class is an example how to inherit BasicShape to create your own shape-drawing class. You
  * should use this class as a pattern for making your own shape classes.
  */
-public class Triangle extends BasicShape {
+public class Hex extends BasicShape {
 
-  public Triangle(int x, int y) {
+  public Hex(int x, int y) {
     super(x, y);
   }
 
@@ -30,13 +30,19 @@ public class Triangle extends BasicShape {
 
     // Create the x coordinates of vertices of the Polygon
     xPoints.add(this.x - 20);
+    xPoints.add(this.x);
     xPoints.add(this.x + 20);
+    xPoints.add(this.x + 20);
+    xPoints.add(this.x);
     xPoints.add(this.x - 20);
 
     // Create the y coordinates of vertices of the Polygon
-    yPoints.add(this.y - 20);
-    yPoints.add(this.y );
-    yPoints.add(this.y + 20);
+    yPoints.add(this.y + 15);
+    yPoints.add(this.y + 25);
+    yPoints.add(this.y + 15);
+    yPoints.add(this.y - 15);
+    yPoints.add(this.y - 25);
+    yPoints.add(this.y - 15);
 
     /*
      * Add each point to the Polygon p. Each x and y value in the lists index correspondent. This
@@ -53,8 +59,8 @@ public class Triangle extends BasicShape {
      * Sets the outline or stroke properties for the class.
      */
     // specify the color
-    Color strokeColor = new Color(116, 180, 155, 255);
-    // make the color the active on
+    Color strokeColor = new Color(252, 153, 60, 255);
+    // make the color the active one
     g2d.setColor(strokeColor);
     // set the stroke to have a width of 6.0f
     g2d.setStroke(new BasicStroke(6.0f));
@@ -65,7 +71,7 @@ public class Triangle extends BasicShape {
      * Sets the internal or fill color of the polygon.
      */
     // create instance for for the fill color.
-    Color fillColor = new Color(211, 246, 209, 150);
+    Color fillColor = new Color(255, 231, 117, 150);
     // set the fill color to be the active color
     g2d.setColor(fillColor);
     // fill Polygon p with fillColor

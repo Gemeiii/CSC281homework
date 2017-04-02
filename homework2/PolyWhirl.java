@@ -1,4 +1,4 @@
-/**
+/*
  * Homework 2 - PolyWhirl
  * 
  * Due: Monday, April 3rd at 11:59pm. Follow the standard homework submission guidelines.
@@ -43,6 +43,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -105,21 +106,30 @@ public class PolyWhirl extends JFrame {
    */
   class Surface extends JPanel {
 
-    List<Crystal> crystals;
+//    List<Crystal> crystals;
    // Add the lists for your shapes below.
     List<Triangle> triangles;
+    List<Quad> quads;
+    List<Pent> pents;
+    List<Hex> hexs;
+//  List<AnyNumberSidesShape> shapeList;
 
     public Surface() {
-      crystals = new ArrayList<Crystal>();
+  //    crystals = new ArrayList<Crystal>();
       // initialize your shape lists here.
       triangles = new ArrayList<Triangle>(); 
+      quads = new ArrayList<Quad>();
+      pents = new ArrayList<Pent>();
+      hexs = new ArrayList<Hex>();
+//      shapeList = new ArrayList<AnyNumberSidesShape>();
     }
+
 
     @Override
     public void paintComponent(Graphics g) {
       super.paintComponent(g);
       this.drawShapes(g);
-      // this.readAndGenerateShapes();
+      this.readAndGenerateShapes();
     }
 
     /**
@@ -131,29 +141,83 @@ public class PolyWhirl extends JFrame {
        * Iterate through reading lines of input. Stop when there is no input left. (You can simulate
        * end of input on the keyboard with ctrl-d).
        */
+   
+       Scanner scan = new Scanner(System.in);
+       boolean inputEnded = false;
+       
+//       while (!inputEnded){
+         System.out.print("Please input number of sides: ");
+         String sidesNumberStr = scan.nextLine();
+      // Create a shape for that line.
+       
+       int sidesNumber = 3;
+       try{
+           sidesNumber = Integer.parseInt(sidesNumberStr);
+       }catch (Exception e){
+	}
+       System.out.println("Number of sides:"+sidesNumber);
 
-      /*
-       * Create a shape for that line.
-       */
+       // x position
+       System.out.print("Please input position x:");  
+       String posXStr = scan.nextLine();
+       int posX = 320;
+       try{
+	posX = Integer.parseInt(posXStr);
+       }catch (Exception e){
+       }
+       System.out.println("Position x:"+posX);
 
-      /*
-       * Add the shape to a list to be drawn.
-       */
+       // y position
+       System.out.print("Please input position y:");
+       String posYStr = scan.nextLine();
+       int posY = 360;
+       try{
+	posY = Integer.parseInt(posYStr);
+       }catch(Exception e){
+       }
+       System.out.println("Position y:"+posY);
+  	
+       // Add the shape to a list to be drawn.
+       if (sidesNumber == 3){
+         this.triangles.add(new Triangle(posX,posY));
+        } else if (sidesNumber == 4){
+         this.quads.add(new Quad(posX,posY));
+	} else if (sidesNumber == 5){
+         this.pents.add(new Pent(posX,posY));
+	} else {
+	 this.hexs.add(new Hex(posX,posY));
+}  
+//       AnyNumberSidesShape shape = new AnyNumberSidesShape(posX,posY,sidesNumber);
+//       shapeList.add(shape);
+//       System.out.println("ok,the shape has been added,would you like to add other shapes? y/n");
+//       String addElse = scan.nextLine();
+//       if ("n".equals(addElse)){
+        inputEnded = true;
+//	System.out.println("drawing...");
+       
 
       /*
        * Here are some test shapes to show that the system works. Remove them before you turn in
        * your homework. Use the power of the crystals wisely!
        */
-      this.crystals.add(new Crystal(100, 125));
-      this.crystals.add(new Crystal(100, 225));
-      this.crystals.add(new Crystal(200, 125));
+      this.triangles.add(new Triangle(100, 125));
+      this.triangles.add(new Triangle(100, 225));
+      this.triangles.add(new Triangle(200, 125));
      
-      this.triangles.add(new Triangle(400,125));
-      this.triangles.add(new Triangle(400,225));
-      this.triangles.add(new Triangle(500,125));
-      // You can stop removing now.
-    }
-
+      this.quads.add(new Quad(400,125));
+      this.quads.add(new Quad(400,225));
+      this.quads.add(new Quad(500,125));
+ 
+      this.pents.add(new Pent(100,425));
+      this.pents.add(new Pent(100,525));
+      this.pents.add(new Pent(200,525));
+ 
+      this.hexs.add(new Hex(400,425));
+      this.hexs.add(new Hex(400,525));
+      this.hexs.add(new Hex(500,525));
+     
+// You can stop removing now.
+}    
     // TODO: document
     public void drawShapes(Graphics g) {
       // draw background
@@ -161,14 +225,20 @@ public class PolyWhirl extends JFrame {
       ((Graphics2D) g).setColor(java.awt.Color.WHITE);
       ((Graphics2D) g).fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
-      for (Crystal c : this.crystals) {
-        c.draw(g);
-      }
+     // for (Crystal c : this.crystals) {
+     //   c.draw(g);
+      //}
       for (Triangle t : this.triangles) {
-	t.draw(g);
-      // Add the loops to draw your shapes below.
-    }
-
-  }
+	t.draw(g);}
+      for (Quad q: this.quads){
+        q.draw(g);}
+      for (Pent p: this.pents){
+        p.draw(g);}
+      for (Hex h: this.hexs){
+        h.draw(g);}
+  // Add the loops to draw your shapes below.
+ //     for (AnyNumberSidesShape a: this.shapeList){
+ //       a.draw(g);
+   }
 }
 }
