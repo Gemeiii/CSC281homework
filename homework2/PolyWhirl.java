@@ -14,7 +14,7 @@
  * 
  * -Make a list per shape to store instances of that shape.
  * 
- * -Read through each shape specification from the input and add a new instance of that shape to the
+  -Read through each shape specification from the input and add a new instance of that shape to the
  * appropriate shape list. For example, the input of 3 100 100 would result in code like the
  * following in the readAndGenerateShapes method of the Surface class: this.tris.add(new Tri(100,
  * 100));
@@ -112,7 +112,7 @@ public class PolyWhirl extends JFrame {
     List<Quad> quads;
     List<Pent> pents;
     List<Hex> hexs;
-//  List<AnyNumberSidesShape> shapeList;
+    List<AnyNumberSidesShape> shapeList;
 
     public Surface() {
   //    crystals = new ArrayList<Crystal>();
@@ -121,7 +121,7 @@ public class PolyWhirl extends JFrame {
       quads = new ArrayList<Quad>();
       pents = new ArrayList<Pent>();
       hexs = new ArrayList<Hex>();
-//      shapeList = new ArrayList<AnyNumberSidesShape>();
+      shapeList = new ArrayList<AnyNumberSidesShape>();
     }
 
 
@@ -184,16 +184,18 @@ public class PolyWhirl extends JFrame {
          this.quads.add(new Quad(posX,posY));
 	} else if (sidesNumber == 5){
          this.pents.add(new Pent(posX,posY));
-	} else {
+	} else if (sidesNumber == 6) {
 	 this.hexs.add(new Hex(posX,posY));
+       } else { 
+	 this.shapeList.add(new AnyNumberSidesShape(posX,posY));
 }  
 //       AnyNumberSidesShape shape = new AnyNumberSidesShape(posX,posY,sidesNumber);
 //       shapeList.add(shape);
 //       System.out.println("ok,the shape has been added,would you like to add other shapes? y/n");
 //       String addElse = scan.nextLine();
 //       if ("n".equals(addElse)){
-        if (scan.nextLine().equals("")){
-        inputEnded = true;}
+//        if (scan.nextLine().equals("")){
+//      inputEnded = true;}
 //	System.out.println("drawing...");
        
 
@@ -238,8 +240,9 @@ public class PolyWhirl extends JFrame {
       for (Hex h: this.hexs){
         h.draw(g);}
   // Add the loops to draw your shapes below.
- //     for (AnyNumberSidesShape a: this.shapeList){
- //       a.draw(g);
+      for (AnyNumberSidesShape a: this.shapeList){
+        a.draw(g);
    }
+}
 }
 }
