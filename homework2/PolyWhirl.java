@@ -129,7 +129,7 @@ public class PolyWhirl extends JFrame {
     public void paintComponent(Graphics g) {
       super.paintComponent(g);
       this.drawShapes(g);
-      this.readAndGenerateShapes();
+//      this.readAndGenerateShapes();
     }
 
     /**
@@ -145,7 +145,8 @@ public class PolyWhirl extends JFrame {
        Scanner scan = new Scanner(System.in);
        boolean inputEnded = false;
        
-//       while (!inputEnded){
+       while (!inputEnded){
+//	scan.hasNextInt();
          System.out.print("Please input number of sides: ");
          String sidesNumberStr = scan.nextLine();
       // Create a shape for that line.
@@ -153,7 +154,7 @@ public class PolyWhirl extends JFrame {
        int sidesNumber = 3;
        try{
            sidesNumber = Integer.parseInt(sidesNumberStr);
-       }catch (Exception e){
+      } catch (Exception e){
 	}
        System.out.println("Number of sides:"+sidesNumber);
 
@@ -178,7 +179,7 @@ public class PolyWhirl extends JFrame {
        System.out.println("Position y:"+posY);
   	
        // Add the shape to a list to be drawn.
-       if (sidesNumber == 3){
+      if (sidesNumber == 3){
          this.triangles.add(new Triangle(posX,posY));
         } else if (sidesNumber == 4){
          this.quads.add(new Quad(posX,posY));
@@ -187,16 +188,21 @@ public class PolyWhirl extends JFrame {
 	} else if (sidesNumber == 6) {
 	 this.hexs.add(new Hex(posX,posY));
        } else { 
-	 this.shapeList.add(new AnyNumberSidesShape(posX,posY));
+	 this.shapeList.add(new AnyNumberSidesShape(posX,posY,sidesNumber));
 }  
 //       AnyNumberSidesShape shape = new AnyNumberSidesShape(posX,posY,sidesNumber);
 //       shapeList.add(shape);
-//       System.out.println("ok,the shape has been added,would you like to add other shapes? y/n");
-//       String addElse = scan.nextLine();
-//       if ("n".equals(addElse)){
+         System.out.println("ok,the shape has been added,would you like to add other shapes? y/n");
+         String addElse = scan.nextLine();
+        if ("n".equals(addElse)){
 //        if (scan.nextLine().equals("")){
-//      inputEnded = true;}
-//	System.out.println("drawing...");
+        inputEnded = true;
+	System.out.println("drawing...");
+  	} else {
+ 	  inputEnded = false;
+
+	}
+
        
 
       /*
@@ -220,7 +226,8 @@ public class PolyWhirl extends JFrame {
       this.hexs.add(new Hex(500,525));
      
 // You can stop removing now.
-}    
+}   
+} 
     // TODO: document
     public void drawShapes(Graphics g) {
       // draw background
