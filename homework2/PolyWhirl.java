@@ -192,7 +192,8 @@ public class PolyWhirl extends JFrame {
 //       System.out.println("ok,the shape has been added,would you like to add other shapes? y/n");
 //       String addElse = scan.nextLine();
 //       if ("n".equals(addElse)){
-        inputEnded = true;
+        if (scan.nextLine().equals("")){
+        inputEnded = true;}
 //	System.out.println("drawing...");
        
 
