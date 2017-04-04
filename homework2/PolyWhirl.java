@@ -135,8 +135,12 @@ public class PolyWhirl extends JFrame {
     /**
      * This is where most of your work in this class will be done.
      */
+    
     // TODO: document
-    public void readAndGenerateShapes() {
+    /**
+    *@return it doesn't return anything it just adds shape to appropriate list
+    */
+      public void readAndGenerateShapes() {
       /*
        * Iterate through reading lines of input. Stop when there is no input left. (You can simulate
        * end of input on the keyboard with ctrl-d).
@@ -229,6 +233,10 @@ public class PolyWhirl extends JFrame {
 }   
 } 
     // TODO: document
+    /**
+     *@param g graphics engine
+     *@return different shapes 
+     */ 
     public void drawShapes(Graphics g) {
       // draw background
       // GradientPaint gradient;
