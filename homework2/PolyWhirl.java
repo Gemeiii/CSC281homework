@@ -48,7 +48,7 @@ import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import shapes.*;
+//import shapes.*;
 
 /**
  * The entry point for the PolyWhirl program. This class inherits JFrame and acts as a window in the
