@@ -1,9 +1,13 @@
+//Score: 96 good job!
+//-5 Incorrect output values.
+//+1 for (^_^ )
+
 import sort.*;
 public class SortingTest {
 	public static void main(String[] args) {
 		System.out.println("Let the tests begin!");
 		SortingTest sortingTest = new SortingTest();
-		
+
 		sortingTest.testAllSorters();
 	//	int[][] x =sortingTest.getRandomArrays(3, 10);
 	//	System.out.println(x[1].length);
@@ -11,7 +15,7 @@ public class SortingTest {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param arrayLength  the length of the random array;
 	 * @return a random array;
 	 */
@@ -43,12 +47,12 @@ public class SortingTest {
 
 		System.out.println("Insertion Descending: ");
 		testInsertionDescending();
-		
+
 	}
 
 	private void testBubbleAscending() {
 		long timeTemp ;
-		
+
 		int counts10 = 0;
 		long time10 =0;
 		int[][] testArrays = getRandomArrays(10,10);
@@ -62,7 +66,7 @@ public class SortingTest {
 		double averagetime10 =(time10)/10.0;
 		System.out.println("Average assignments and time in 10 runs ");
 		System.out.println("length : 10"+"    assignments:"+averageCounts10+"    time:"+averagetime10);
-		
+
 		int counts100 = 0;
 		long time100 =0;
 		int[][] testArrays100 = getRandomArrays(10,100);
@@ -76,7 +80,7 @@ public class SortingTest {
 		float averageCounts100=(float)(counts100) / 10.0f;
 		double averagetime100 =(time100)/10.0;
 		System.out.println("length : 100"+"    assignments:"+averageCounts100+"    time:"+averagetime100);
-		
+
 		int counts1000 = 0;
 		long time1000 =0;
 		int[][] testArrays1000 = getRandomArrays(10,1000);
@@ -91,13 +95,13 @@ public class SortingTest {
 		System.out.println("length : 1000"+"    assignments:"+averageCounts1000+"    time:"+averagetime1000);
 		System.out.println("( ^_^).=================================.(^_^ )");
 		System.out.println("");
-		
-		
+
+
 	}
 
 	private void testBubbleDescending() {
 		long timeTemp ;
-		
+
 		int counts10 = 0;
 		long time10 =0;
 		int[][] testArrays = getRandomArrays(10,10);
@@ -111,7 +115,7 @@ public class SortingTest {
 		double averagetime10 =(time10)/10.0;
 		System.out.println("Average assignments and time in 10 runs of bubble sort ascending for each case");
 		System.out.println("length : 10"+"    assignments:"+averageCounts10+"    time:"+averagetime10);
-		
+
 		int counts100 = 0;
 		long time100 =0;
 		int[][] testArrays100 = getRandomArrays(10,100);
@@ -125,7 +129,7 @@ public class SortingTest {
 		float averageCounts100=(float)(counts100) / 10.0f;
 		double averagetime100 =(time100)/10.0;
 		System.out.println("length : 100"+"    assignments:"+averageCounts100+"    time:"+averagetime100);
-		
+
 		int counts1000 = 0;
 		long time1000 =0;
 		int[][] testArrays1000 = getRandomArrays(10,1000);
@@ -140,12 +144,12 @@ public class SortingTest {
 		System.out.println("length : 1000"+"    assignments:"+averageCounts1000+"    time:"+averagetime1000);
 		System.out.println("( ^_^).=================================.(^_^ )");
 		System.out.println("");
-		
+
 
 	}
 
 	private void testSelectionAscending() {
-		long timeTemp ;		
+		long timeTemp ;
 		int counts10 = 0;
 		long time10 =0;
 		int[][] testArrays = getRandomArrays(10,10);
@@ -159,7 +163,7 @@ public class SortingTest {
 		double averagetime10 =(time10)/10.0;
 		System.out.println("Average assignments and time in 10 runs of bubble sort ascending for each case");
 		System.out.println("length : 10"+"    assignments:"+averageCounts10+"    time:"+averagetime10);
-		
+
 		int counts100 = 0;
 		long time100 =0;
 		int[][] testArrays100 = getRandomArrays(10,100);
@@ -173,7 +177,7 @@ public class SortingTest {
 		float averageCounts100=(float)(counts100) / 10.0f;
 		double averagetime100 =(time100)/10.0;
 		System.out.println("length : 100"+"    assignments:"+averageCounts100+"    time:"+averagetime100);
-		
+
 		int counts1000 = 0;
 		long time1000 =0;
 		int[][] testArrays1000 = getRandomArrays(10,1000);
@@ -191,7 +195,7 @@ public class SortingTest {
 	}
 
 	private void testSelectionDescending() {
-		long timeTemp ;		
+		long timeTemp ;
 		int counts10 = 0;
 		long time10 =0;
 		int[][] testArrays = getRandomArrays(10,10);
@@ -205,7 +209,7 @@ public class SortingTest {
 		double averagetime10 =(time10)/10.0;
 		System.out.println("Average assignments and time in 10 runs of bubble sort ascending for each case");
 		System.out.println("length : 10"+"    assignments:"+averageCounts10+"    time:"+averagetime10);
-		
+
 		int counts100 = 0;
 		long time100 =0;
 		int[][] testArrays100 = getRandomArrays(10,100);
@@ -219,7 +223,7 @@ public class SortingTest {
 		float averageCounts100=(float)(counts100) / 10.0f;
 		double averagetime100 =(time100)/10.0;
 		System.out.println("length : 100"+"    assignments:"+averageCounts100+"    time:"+averagetime100);
-		
+
 		int counts1000 = 0;
 		long time1000 =0;
 		int[][] testArrays1000 = getRandomArrays(10,1000);
@@ -237,7 +241,7 @@ public class SortingTest {
 	}
 
 	private void testInsertionAscending() {
-		long timeTemp ;		
+		long timeTemp ;
 		int counts10 = 0;
 		long time10 =0;
 		int[][] testArrays = getRandomArrays(10,10);
@@ -251,7 +255,7 @@ public class SortingTest {
 		double averagetime10 =(time10)/10.0;
 		System.out.println("Average assignments and time in 10 runs of bubble sort ascending for each case");
 		System.out.println("length : 10"+"    assignments:"+averageCounts10+"    time:"+averagetime10);
-		
+
 		int counts100 = 0;
 		long time100 =0;
 		int[][] testArrays100 = getRandomArrays(10,100);
@@ -265,7 +269,7 @@ public class SortingTest {
 		float averageCounts100=(float)(counts100) / 10.0f;
 		double averagetime100 =(time100)/10.0;
 		System.out.println("length : 100"+"    assignments:"+averageCounts100+"    time:"+averagetime100);
-		
+
 		int counts1000 = 0;
 		long time1000 =0;
 		int[][] testArrays1000 = getRandomArrays(10,1000);
@@ -283,7 +287,7 @@ public class SortingTest {
 	}
 
 	private void testInsertionDescending() {
-		long timeTemp ;		
+		long timeTemp ;
 		int counts10 = 0;
 		long time10 =0;
 		int[][] testArrays = getRandomArrays(10,10);
@@ -297,7 +301,7 @@ public class SortingTest {
 		double averagetime10 =(time10)/10.0;
 		System.out.println("Average assignments and time in 10 runs of bubble sort ascending for each case");
 		System.out.println("length : 10"+"    assignments:"+averageCounts10+"    time:"+averagetime10);
-		
+
 		int counts100 = 0;
 		long time100 =0;
 		int[][] testArrays100 = getRandomArrays(10,100);
@@ -311,7 +315,7 @@ public class SortingTest {
 		float averageCounts100=(float)(counts100) / 10.0f;
 		double averagetime100 =(time100)/10.0;
 		System.out.println("length : 100"+"    assignments:"+averageCounts100+"    time:"+averagetime100);
-		
+
 		int counts1000 = 0;
 		long time1000 =0;
 		int[][] testArrays1000 = getRandomArrays(10,1000);
